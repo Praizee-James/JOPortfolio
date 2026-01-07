@@ -5,7 +5,7 @@ const Skills = () => {
             <div className="w-60 h-10 bg-blue-800 text-white items-center mx-auto text-center rounded-2xl">
                 <h1 className="font-bold font-serif text-2xl">SKILLS</h1>
             </div>
-            <div className=" flex flex-wrap justify-center gap-6">
+            <div className=" flex flex-col sm:flex-row flex-wrap justify-center gap-6">
                 <motion.div className="w-[200px] h-[300px] bg-blue-800 text-white rounded-full  items-center p-4 text-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
                     transition={{
                         duration: 1,

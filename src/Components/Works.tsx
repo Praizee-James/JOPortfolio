@@ -41,7 +41,7 @@ const Works = () => {
     },
  ]
   return (
-    <section className="ml-[200px]  min-h-screen p-10 bg-blue-700 flex flex-col  gap-6">
+    <section className="ml-[200px]  min-h-screen p-10 bg-blue-900 flex flex-col  gap-6">
         <h1 className='text-3xl font-bold text-white'>Portfolio</h1>
       <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 '>
         {WorkImages.map((WorkImage,index) => (

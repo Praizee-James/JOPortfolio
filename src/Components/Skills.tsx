@@ -2,11 +2,11 @@ import { motion } from "framer-motion"
 const Skills = () => {
     return (
         <section className="ml-[200px] p-10 bg-white flex flex-col items-center gap-6">
-            <div className="w-60 h-10 bg-blue-800 text-white items-center mx-auto text-center rounded-2xl">
+            <div className="w-60 h-10 bg-blue-900 text-white items-center mx-auto text-center rounded-2xl">
                 <h1 className="font-bold font-serif text-2xl">SKILLS</h1>
             </div>
             <div className=" flex flex-col sm:flex-row flex-wrap justify-center gap-6">
-                <motion.div className="w-[200px] h-[300px] bg-blue-800 text-white rounded-full  items-center p-4 text-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
+                <motion.div className="w-[200px] h-[300px] bg-blue-900 text-white rounded-full  items-center p-4 text-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
                     transition={{
                         duration: 1,
                         repeat: 0,
@@ -24,7 +24,7 @@ const Skills = () => {
                 </motion.div>
                 
 
-                <motion.div className="w-[200px] h-[300px] bg-blue-800 text-white rounded-full items-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
+                <motion.div className="w-[200px] h-[300px] bg-blue-900 text-white rounded-full items-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
                     transition={{
                         duration: 1,
                         repeat: 0,
@@ -37,7 +37,7 @@ const Skills = () => {
                     <h2>Framer Motion</h2>
                 </motion.div>
 
-                <motion.div className="w-[200px] h-[300px] bg-blue-800 text-white rounded-full items-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
+                <motion.div className="w-[200px] h-[300px] bg-blue-900 text-white rounded-full items-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
                     transition={{
                         duration: 1,
                         repeat: 0,
@@ -50,7 +50,7 @@ const Skills = () => {
                     <h2>VS Code</h2>
                     
                 </motion.div>
-                <motion.div className="w-[200px] h-[300px] bg-blue-800 text-white rounded-full items-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
+                <motion.div className="w-[200px] h-[300px] bg-blue-900 text-white rounded-full items-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
                     transition={{
                         duration: 1,
                         repeat: Infinity,
@@ -63,7 +63,7 @@ const Skills = () => {
                     <h2>Responsive Design</h2>
 
                 </motion.div>
-                <motion.div className="w-[200px] h-[300px] bg-blue-800 text-white rounded-full items-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
+                <motion.div className="w-[200px] h-[300px] bg-blue-900 text-white rounded-full items-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
                     transition={{
                         duration: 1,
                         repeat: Infinity,
@@ -75,7 +75,7 @@ const Skills = () => {
                     <h2>npm/Yarn</h2>
                     
                 </motion.div>
-                <motion.div className="w-[200px] h-[300px] bg-blue-800 text-white rounded-full items-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
+                <motion.div className="w-[200px] h-[300px] bg-blue-900 text-white rounded-full items-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
                     transition={{
                         duration: 1,
                         repeat: Infinity,

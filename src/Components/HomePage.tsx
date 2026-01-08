@@ -36,10 +36,10 @@ const HomePage = () => {
                 /></h1>
                 <p className="">I build captivating,user-friendly websites that transform your ideas into engaging experiences and promotes business processes.</p>
                 <div className="pt-12 p-4 flex gap-4">
-                    <button className="bg-blue-800 text-white rounded-2xl p-4 flex gap-2 items-center hover:bg-white  hover:text-blue-700  ">
+                    <button className="bg-blue-900 text-white rounded-2xl p-4 flex gap-2 items-center hover:bg-white  hover:text-blue-800  ">
                         <GrContactInfo size={20} /> Contact Me
                     </button>
-                    <button className="bg-blue-800 text-white rounded-2xl p-4 flex gap-2 items-center hover:bg-white  hover:text-blue-700 ">
+                    <button className="bg-blue-900 text-white rounded-2xl p-4 flex gap-2 items-center hover:bg-white  hover:text-blue-800 ">
                         <BiDownload size={20} /> Download CV
                     </button>
                 </div>

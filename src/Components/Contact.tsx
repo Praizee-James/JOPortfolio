@@ -1,6 +1,27 @@
 import { FaAsterisk, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 const Contact = () => {
+    const formRef = useRef<HTMLFormElement | null>(null);
+    const sendEmail = (e:React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+         if (!formRef.current) return;
+        emailjs.sendForm(
+            'YOUR_SERVICE_ID',
+            'YOUR_TEMPLATE_ID',
+            formRef.current,
+            'YOUR_PUBLIC_KEY'
+        )
+             .then(
+        (result) => {
+            console.log("Message sent:", result.text);
+        },
+        (error) => {
+            console.error("Error:", error.text);
+        }
+    );
+    };
     const contactLink = [
         {
             id: 1,
@@ -51,53 +72,72 @@ const Contact = () => {
                     </p>
                 </div>
 
-                {/* Full Name */}
-                <div className="flex flex-col gap-2">
-                    <label className="flex items-center gap-1 text-sm">
-                        Full name <FaAsterisk size={7} />
-                    </label>
-                    <div className="flex gap-3">
+                <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-6">
+
+                    {/* Full Name */}
+                    <div className="flex flex-col gap-2">
+                        <label className="flex items-center gap-1 text-sm">
+                            Full name <FaAsterisk size={7} />
+                        </label>
+
+                        <div className="flex gap-3">
+                            <input
+                                type="text"
+                                name="first_name"
+                                placeholder="First name"
+                                required
+                                className="w-full px-3 py-2 rounded-md text-black outline-none"
+                            />
+
+                            <input
+                                type="text"
+                                name="last_name"
+                                placeholder="Last name"
+                                required
+                                className="w-full px-3 py-2 rounded-md text-black outline-none"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Email */}
+                    <div className="flex flex-col gap-2">
+                        <label className="flex items-center gap-1 text-sm">
+                            Email address <FaAsterisk size={7} />
+                        </label>
+
                         <input
-                            type="text"
-                            placeholder="First name"
-                            className="w-full px-3 py-2 rounded-md text-black outline-none"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Last name"
+                            type="email"
+                            name="email"
+                            placeholder="Email address"
+                            required
                             className="w-full px-3 py-2 rounded-md text-black outline-none"
                         />
                     </div>
-                </div>
 
-                {/* Email */}
-                <div className="flex flex-col gap-2">
-                    <label className="flex items-center gap-1 text-sm">
-                        Email address <FaAsterisk size={7} />
-                    </label>
-                    <input
-                        type="email"
-                        placeholder="Email address"
-                        className="w-full px-3 py-2 rounded-md text-black outline-none"
-                    />
-                </div>
+                    {/* Message */}
+                    <div className="flex flex-col gap-2">
+                        <label className="flex items-center gap-1 text-sm">
+                            Message <FaAsterisk size={7} />
+                        </label>
 
-                {/* Message */}
-                <div className="flex flex-col gap-2">
-                    <label className="flex items-center gap-1 text-sm">
-                        Message <FaAsterisk size={7} />
-                    </label>
-                    <textarea
-                        placeholder="Write your message..."
-                        className="w-full h-32 px-3 py-2 rounded-md text-black outline-none resize-none"
-                    />
-                </div>
+                        <textarea
+                            name="message"
+                            placeholder="Write your message..."
+                            required
+                            className="w-full h-32 px-3 py-2 rounded-md text-black outline-none resize-none"
+                        />
+                    </div>
 
-                {/* Button */}
-                <button className="mt-2 bg-white text-blue-800 py-3 rounded-lg font-semibold
-                           hover:bg-gray-200 transition">
-                    Send Message
-                </button>
+                    {/* Button */}
+                    <button
+                        type="submit"
+                        className="mt-2 bg-white text-blue-800 py-3 rounded-lg font-semibold
+               hover:bg-gray-200 transition"
+                    >
+                        Send Message
+                    </button>
+
+                </form>
 
             </div>
         </section>

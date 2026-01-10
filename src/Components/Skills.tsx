@@ -1,15 +1,19 @@
 import { motion } from "framer-motion"
 const Skills = () => {
     return (
-        <section className="ml-[200px] p-10 bg-white flex flex-col items-center gap-6">
-            <div className="w-60 h-10 bg-blue-900 text-white items-center mx-auto text-center rounded-2xl">
+        <section id="skills" className="lg:ml-[200px] ml-0 p-6 sm:p-8 lg:p-10  bg-white flex flex-col items-center gap-6">
+            <div className=" mx-auto  w-60 h-10 bg-blue-900 text-white items-center mx-auto text-center rounded-2xl">
                 <h1 className="font-bold font-serif text-2xl">SKILLS</h1>
             </div>
-            <div className=" flex flex-col sm:flex-row flex-wrap justify-center gap-6">
+            <div className=" grid 
+  grid-cols-1 
+  sm:grid-cols-2 
+  md:grid-cols-2 
+  lg:grid-cols-3  justify-center gap-6">
                 <motion.div className="w-[200px] h-[300px] bg-blue-900 text-white rounded-full  items-center p-4 text-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
                     transition={{
                         duration: 1,
-                        repeat: 0,
+                        repeat: Infinity,
                         repeatType: "reverse",
                         ease: "easeInOut",
                     }}>
@@ -27,7 +31,7 @@ const Skills = () => {
                 <motion.div className="w-[200px] h-[300px] bg-blue-900 text-white rounded-full items-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
                     transition={{
                         duration: 1,
-                        repeat: 0,
+                        repeat: Infinity,
                         repeatType: "reverse",
                         ease: "easeInOut",
                     }} >
@@ -40,7 +44,7 @@ const Skills = () => {
                 <motion.div className="w-[200px] h-[300px] bg-blue-900 text-white rounded-full items-center flex flex-col justify-center  p-4 text-center" animate={{ y: [-20, 0] }}  // lift up 20px then drop
                     transition={{
                         duration: 1,
-                        repeat: 0,
+                        repeat: Infinity,
                         repeatType: "reverse",
                         ease: "easeInOut",
                     }}>

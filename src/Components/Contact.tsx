@@ -44,8 +44,8 @@ const Contact = () => {
         },
     ]
     return (
-        <section className="ml-[200px] min-h-screen bg-white p-10 flex items-center justify-center">
-            <div className="w-[500px] bg-blue-900 rounded-xl p-8 font-serif text-white
+        <section id="contact" className="ml-0 md:ml-[200px] lg:ml-[200px] p-6 sm:p-8 lg:p-10  min-h-screen bg-white flex items-center justify-center">
+            <div className="w-full max-w-[500px] md:max-w-[450px] lg:max-w-[500px] bg-blue-900 rounded-xl p-8 font-serif text-white
                       flex flex-col gap-6">
 
                 {/* Heading */}

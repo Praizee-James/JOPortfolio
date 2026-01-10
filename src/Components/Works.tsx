@@ -41,19 +41,23 @@ const Works = () => {
     },
  ]
   return (
-    <section className="ml-[200px]  min-h-screen p-10 bg-blue-900 flex flex-col  gap-6">
-        <h1 className='text-3xl font-bold text-white'>Portfolio</h1>
-      <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 '>
+    <section id="portfolio" className="ml-0 md:ml-[200px] lg:ml-[200px] p-6 sm:p-8 lg:p-10   min-h-screen  bg-blue-900 flex flex-col  gap-6">
+        <h1 className='text-3xl font-bold text-white mx-auto'>Portfolio</h1>
+      <div className='grid 
+  grid-cols-1 
+  sm:grid-cols-1
+  md:grid-cols-2 
+  lg:grid-cols-3 gap-4 mx-auto '>
         {WorkImages.map((WorkImage,index) => (
             <a key ={index} 
             href={WorkImage.link}
             target='_blank'
             rel='noopener noreferrer'
-            className="group rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300"
+            className=" w-full max-w-sm md:max-w-full mx-auto group rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300"
             >
                 {/* Image */}
-                <div className='overflow-hidden'>
-                    <img src={WorkImage.image} alt="" className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className='overflow-hidden aspect-[16/9]'>
+                    <img src={WorkImage.image} alt="" className=" w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 {/* Title body */}
                 <div className="p-6">

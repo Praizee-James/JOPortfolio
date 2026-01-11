@@ -5,6 +5,9 @@ const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const publicId = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+console.log(serviceId)
+console.log(templateId)
+console.log(publicId)
 const Contact = () => {
 
     const formRef = useRef<HTMLFormElement | null>(null);
@@ -12,7 +15,7 @@ const Contact = () => {
         e.preventDefault();
          if (!formRef.current) return;
         emailjs.sendForm(
-            serviceId,
+         serviceId,
             templateId,
             formRef.current,
             publicId

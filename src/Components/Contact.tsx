@@ -1,17 +1,21 @@
 import { FaAsterisk, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const publicId = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
+
     const formRef = useRef<HTMLFormElement | null>(null);
     const sendEmail = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
          if (!formRef.current) return;
         emailjs.sendForm(
-            'YOUR_SERVICE_ID',
-            'YOUR_TEMPLATE_ID',
+            serviceId,
+            templateId,
             formRef.current,
-            'YOUR_PUBLIC_KEY'
+            publicId
         )
              .then(
         (result) => {

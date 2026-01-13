@@ -1,6 +1,6 @@
 import { FaAsterisk, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-import { useRef,useState } from "react";
+import { useRef, useState } from "react";
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const publicId = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -12,29 +12,30 @@ const Contact = () => {
 
     const formRef = useRef<HTMLFormElement | null>(null);
     const [success, setSuccess] = useState(false);
-    const sendEmail = (e:React.FormEvent<HTMLFormElement>) => {
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-         if (!formRef.current) return;
+        const form = formRef.current;
+        if (!form) return;
         emailjs.sendForm(
-         serviceId,
+            serviceId,
             templateId,
-            formRef.current,
+            form,
             publicId
         )
-             .then(
-        () => {
-            setSuccess(true);
+            .then(
+                () => {
+                    setSuccess(true);
 
-        // Clear form fields
-        formRef.current.reset();
+                    // Clear form fields
+                    form.reset();
 
-        // Hide notification after 4 seconds
-        setTimeout(() => setSuccess(false), 4000);
-        },
-        (error) => {
-            console.error("Error:", error.text);
-        }
-    );
+                    // Hide notification after 4 seconds
+                    setTimeout(() => setSuccess(false), 4000);
+                },
+                (error) => {
+                    console.error("Error:", error.text);
+                }
+            );
     };
     const contactLink = [
         {
@@ -86,11 +87,11 @@ const Contact = () => {
                     </p>
                 </div>
 
-{success && (
-  <div className="bg-blue-100 text-blue-700 px-4 py-3 rounded-md text-center">
-    ✅ Message sent successfully!
-  </div>
-)}
+                {success && (
+                    <div className="bg-blue-100 text-blue-700 px-4 py-3 rounded-md text-center">
+                        ✅ Message sent successfully!
+                    </div>
+                )}
                 <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-6">
 
                     {/* Full Name */}

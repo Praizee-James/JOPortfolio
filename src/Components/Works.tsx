@@ -1,7 +1,7 @@
 import CakeDelivery from '../assets/CakeDelivery.png';
 import DataWebsite from '../assets/DataWebsite.png';
-import NewsWebsite from '../assets/NewsWebsite.png'
-import { FaReact,FaJsSquare,FaGithub } from 'react-icons/fa';
+import Netflix from '../assets/Netflix.png'
+import { FaReact,FaJsSquare,FaGithub,FaCloudDownloadAlt } from 'react-icons/fa';
  
 const Works = () => {
     const WorkImages =[
@@ -18,14 +18,14 @@ const Works = () => {
     },
      {
         id:2,
-       title:'DailyNews App',
-       image:NewsWebsite,
-       link:'https://my-news-app-omega.vercel.app/' ,
-       Github : 'https://github.com/Praizee-James/my-news-app',
+       title:'Netflix clone',
+       image:Netflix,
+       link:'hhttps://first-netflix-clone-one.vercel.app/' ,
+       Github : 'https://github.com/Praizee-James/first-netflix-clone',
        tech:[
         <FaReact key="react" />,
         <FaJsSquare key="js" />,
-        
+        <FaCloudDownloadAlt key='API' />,
        ],
     },
      {

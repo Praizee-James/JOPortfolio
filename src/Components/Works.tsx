@@ -1,12 +1,52 @@
 import CakeDelivery from '../assets/CakeDelivery.png';
-import DataWebsite from '../assets/DataWebsite.png';
+import LuxuryPerf from '../assets/LuxuryPerf.png';
+import Omoney from '../assets/Omoney.png';
+import TalentLink from '../assets/TalentLink.png';
 import Netflix from '../assets/Netflix.png'
-import { FaReact,FaJsSquare,FaGithub,FaCloudDownloadAlt } from 'react-icons/fa';
+import { FaReact, FaJsSquare,FaGithub,FaCloudDownloadAlt, FaCss3 } from 'react-icons/fa';
  
 const Works = () => {
     const WorkImages =[
-    {
+        {
         id: 1,
+       title:'OMoney',
+       image: Omoney,
+       link:'https://omoney-website.vercel.app/' ,
+       Github : 'https://github.com/Praizee-James/Omoney-website',
+       tech:[
+        
+        <FaJsSquare key="js" />,
+        <FaCss3 key="Tailwind css" />,
+        
+       ],
+    },
+     {
+        id:2,
+       title:'TalentLink',
+       image:TalentLink,
+       link:'https://talent-link-two.vercel.app/' ,
+       Github : 'https://github.com/Praizee-James/TalentLink',
+       tech:[
+        <FaReact key="react" />,
+        <FaJsSquare key="js" />,
+        <FaCloudDownloadAlt key='API' />,
+        <FaCss3 key="Tailwind css" />,
+       ],
+    },
+     {
+        id:3,
+       title:'Luxury Perfume',
+       image:LuxuryPerf,
+       link:'https://luxury-perf.vercel.app/' ,
+       Github : 'https://github.com/Praizee-James/Luxury-perf',
+       tech:[
+        <FaReact key="react" />,
+        <FaJsSquare key="js" />,
+        <FaCss3 key="Tailwind css" />,
+       ],
+    },
+    {
+        id: 4,
        title:'Fluffy Treats',
        image:CakeDelivery,
        link:'https://cake-website-iota-bice.vercel.app/' ,
@@ -14,10 +54,11 @@ const Works = () => {
        tech:[
         <FaReact key="react" />,
         <FaJsSquare key="js" />,
+         <FaCss3 key="Tailwind css" />,
        ],
     },
      {
-        id:2,
+        id:5,
        title:'Netflix clone',
        image:Netflix,
        link:'hhttps://first-netflix-clone-one.vercel.app/' ,
@@ -28,17 +69,7 @@ const Works = () => {
         <FaCloudDownloadAlt key='API' />,
        ],
     },
-     {
-        id:3,
-       title:'Grow with Data Website',
-       image:DataWebsite,
-       link:'https://new-data-website.vercel.app/' ,
-       Github : 'https://github.com/Praizee-James/React-Website',
-       tech:[
-        <FaReact key="react" />,
-        <FaJsSquare key="js" />,
-       ],
-    },
+     
  ]
   return (
     <section id="portfolio" className="ml-0 md:ml-[200px] lg:ml-[200px] p-6 sm:p-8 lg:p-10   min-h-screen  bg-blue-900 flex flex-col  gap-6">

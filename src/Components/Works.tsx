@@ -1,6 +1,6 @@
 import CakeDelivery from '../assets/CakeDelivery.png';
 import LuxuryPerf from '../assets/LuxuryPerf.png';
-import Omoney from '../assets/Omoney.png';
+import OMoney from '../assets/OMoney.png';
 import TalentLink from '../assets/TalentLink.png';
 import Netflix from '../assets/Netflix.png'
 import { FaReact, FaJsSquare,FaGithub,FaCloudDownloadAlt, FaCss3 } from 'react-icons/fa';
@@ -10,7 +10,7 @@ const Works = () => {
         {
         id: 1,
        title:'OMoney',
-       image: Omoney,
+       image: OMoney,
        link:'https://omoney-website.vercel.app/' ,
        Github : 'https://github.com/Praizee-James/Omoney-website',
        tech:[
